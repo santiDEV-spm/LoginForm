@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+
+      <RelativeLayout
+          android:layout_width="@dimen/no_value"
+          android:layout_height="match_parent"
+          android:layout_weight="0.5">
+
+          <TextView
+              android:id="@+id/textView"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="20dp"
+              android:layout_marginTop="20dp"
+              android:layout_marginEnd="20dp"
+              android:text="Introduce tus datos de registro"
+              android:textSize="20sp"
+              android:textStyle="bold" />
+
+          <EditText
+              android:id="@+id/editTextTextPersonName"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/textView"
+              android:layout_marginStart="20dp"
+              android:layout_marginTop="48dp"
+              android:layout_marginEnd="48dp"
+              android:ems="10"
+              android:hint="Introduce tu Nombre"
+              android:inputType="textPersonName" />
+
+          <EditText
+              android:id="@+id/editTextTextPersonEmail"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="48dp"
+              android:ems="10"
+              android:inputType="textEmailAddress"
+              android:hint="Introduce tu Email"
+              android:layout_below="@id/editTextTextPersonName"
+              android:layout_marginTop="48dp"
+              android:layout_marginStart="20dp"/>
+
+          <EditText
+              android:id="@+id/editTextTextPersonPass"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:ems="10"
+              android:inputType="textPassword"
+              android:hint="Introduce tu Contraseña"
+              android:layout_below="@id/editTextTextPersonEmail"
+              android:layout_marginTop="48dp"
+              android:layout_marginStart="20dp"
+              android:layout_marginEnd="48dp"/>
+
+          <EditText
+              android:id="@+id/editTextTextPersonPassConfirm"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:ems="10"
+              android:inputType="textPassword"
+              android:hint="Confirma tu Contraseña"
+              android:layout_below="@id/editTextTextPersonPass"
+              android:layout_marginTop="48dp"
+              android:layout_marginStart="20dp"
+              android:layout_marginEnd="48dp"/>
+
+      </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/no_value"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:mipmap/sym_def_app_icon"
+            android:layout_marginTop="36dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/terminosCondiciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Términos y Condiciones"
+            android:layout_below="@id/imageView"
+            android:layout_centerHorizontal="true"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/terminosCondiciones">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/terminosCondicionesTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/terminos"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="20dp"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/terminosCondicionesTexto"
+                    android:text="Acepto los terminos y condiciones"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="40dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@id/checkbox"
+                    android:layout_alignBaseline="@id/checkbox"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="20dp"
+                    android:text="Enviar"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
